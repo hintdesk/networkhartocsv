@@ -15,6 +15,6 @@ export class AboutComponent {
 
 
     home() {
-        this.router.navigate(["/"]);
+        this.router.navigate(["/input"]);
     }
 }

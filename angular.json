@@ -123,6 +123,14 @@
               "devServerTarget": "hartocsv:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://hintdesk.github.io/networkhartocsv/",
+            "name": "Network HAR to CSV",
+            "email": "admin@hintdesk.com"
+          }
         }
       }
     }
