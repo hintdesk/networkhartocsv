@@ -1,0 +1,53 @@
+@import "./../../../variables";
+
+.content_container {
+    width: 90%;
+    margin-top: 30px;
+}
+
+.content {
+    height: 60vh;
+}
+
+.form_container {
+    width: 100%;
+    text-align: center;
+}
+
+textarea {
+    color: white;
+    background-color: #333333;
+    padding: 15px;
+}
+
+.parse_container {
+    text-align: center;
+}
+
+.select_file_container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.or {
+    color: $primaryColor;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.select_file_button {
+    width: 150px;
+    height: 100px;
+}
+
+.copy_paste_title {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.parse {
+    width: 150px;
+    height: 100px;
+}

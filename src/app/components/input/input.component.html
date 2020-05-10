@@ -1,0 +1,17 @@
+<div class="select_file_container">
+    <button class="select_file_button" type="button" mat-raised-button (click)="fileInput.click()">Select HAR file</button>
+    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+</div>
+
+<div class="or">OR</div>
+
+<div class="copy_paste_title">Copy and paste the content of the HAR file into text area below</div>
+<form class="form_container">
+    <mat-form-field class="content_container">
+        <textarea class="content" name="harContent" matInput placeholder="..." [(ngModel)]="harContent"></textarea>
+    </mat-form-field>
+
+    <div class="parse_container">
+        <button class="parse" (click)="parse()" mat-raised-button color="primary">Parse</button>
+    </div>
+</form>

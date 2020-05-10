@@ -1,0 +1,45 @@
+@import "./../../../variables";
+.title {
+  &__container {
+    margin-top: 48px;
+    color: white;
+  }
+
+  &__text {
+    color: $primaryColor;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 48px;
+  }
+}
+
+.about {
+  &__container {
+    margin: auto;
+    margin-top: 80px;
+    line-height: 2.5;
+  }
+
+  &__paragraph {
+    margin-top: 20px;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+  .about {
+    &__container {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    &__container {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Show columns</h1>
+<div mat-dialog-content>
+    <div class="column_container">
+        <div class="column_item" *ngFor="let column of availableColumns">
+            <mat-checkbox [(ngModel)]="column.IsVisible">{{column.Name}}</mat-checkbox>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <div class="button_container">
+        <button mat-button (click)="cancel()">Cancel</button>
+        <button mat-button (click)="ok()" cdkFocusInitial>Ok</button>
+    </div>
+</div>

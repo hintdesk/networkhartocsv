@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <mat-form-field class="filter">
+    <mat-label >Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Enter keyword to filter">
+  </mat-form-field>
+  <button (click)="columns()" class="columns" mat-raised-button color="primary">Columns</button>
+
+  <button (click)="exportToCsv()" class="export_to_csv" mat-raised-button color="primary">Export to CSV</button>
+
+</mat-toolbar>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <ng-container *ngFor="let column of visibleColumns" matColumnDef="{{column.Id}}">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column.Name}} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column.Id]}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnHeaders"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnHeaders;"></tr>
+</table>

@@ -1,0 +1,48 @@
+@import "./../../../variables";
+
+.footer {
+  background: #212121;
+  color: white;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 40px;
+  &__icon {
+    flex: 1;
+    &__image {
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-width: 225px;
+    margin: 5px;
+    text-align: center;
+  }
+}
+
+.footer-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-list {
+    flex-direction: column;
+  }
+}
