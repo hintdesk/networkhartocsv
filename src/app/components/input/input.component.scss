@@ -6,7 +6,7 @@
 }
 
 .content {
-    height: 60vh;
+    height: calc(100vh - 550px);
 }
 
 .form_container {
@@ -38,7 +38,7 @@ textarea {
 
 .select_file_button {
     width: 150px;
-    height: 90px;
+    height: 80px;
 }
 
 .copy_paste_title {
@@ -49,5 +49,5 @@ textarea {
 
 .parse {
     width: 150px;
-    height: 90px;
+    height: 80px;
 }
