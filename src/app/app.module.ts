@@ -1,29 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './components/footer/footer.component';
 import { AboutComponent } from './components/about/about.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatTableModule } from '@angular/material/table';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { InputComponent } from './components/input/input.component';
+import { AppComponent } from './app.component';
 import { AppContext } from './infrastructure/app.context';
+import { AppRoutingModule } from './app-routing.module';
 import { AppSession } from './infrastructure/sessions/app.session';
-import { CommonModule } from '@angular/common';
-import { TableComponent } from './components/table/table.component';
-import { MatSortModule } from '@angular/material/sort';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { FileSaverModule } from 'ngx-filesaver';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import {MatDialogModule} from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
 import { ColumnComponent } from './components/column/column.component';
+import { CommonModule } from '@angular/common';
+import { FileSaverModule } from 'ngx-filesaver';
+import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components/header/header.component';
+import { InputComponent } from './components/input/input.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgModule } from '@angular/core';
+import { TableComponent } from './components/table/table.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -57,7 +57,7 @@ import { ColumnComponent } from './components/column/column.component';
     FileSaverModule
 
   ],
-  entryComponents:[
+  entryComponents: [
     ColumnComponent
   ],
   providers: [

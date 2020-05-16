@@ -11,6 +11,7 @@
     text-transform: uppercase;
     cursor: pointer;
     font-size: 48px;
+    line-height: 1;
   }
 }
 
@@ -23,6 +24,10 @@
 
   &__paragraph {
     margin-top: 20px;
+
+    &__image {
+      max-width: 100%;
+    }
   }
 }
 
