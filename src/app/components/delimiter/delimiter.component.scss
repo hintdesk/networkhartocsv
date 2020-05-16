@@ -1,0 +1,12 @@
+.delimiter_container {
+    display: flex; 
+    flex-direction: column;
+}
+
+.delimiter_item {
+    margin-top: 15px;
+}
+
+.mat-dialog-actions {
+    justify-content: flex-end;
+}

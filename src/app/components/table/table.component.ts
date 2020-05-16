@@ -9,6 +9,7 @@ import { FileSaverService } from 'ngx-filesaver';
 import { MatDialog } from '@angular/material/dialog';
 import { ColumnComponent } from '../column/column.component';
 import { Column } from 'src/app/models/column';
+import { DelimiterComponent } from '../delimiter/delimiter.component';
 
 
 @Component({
@@ -76,30 +77,40 @@ export class TableComponent implements OnInit {
     }
 
     exportToCsv() {
-        let rows = this.dataSource.connect().value;
-        let content = "";
-        for (let index = 0; index < this.visibleColumns.length; index++) {
-            content += this.visibleColumns[index].Name + ";"
-        }
+        const dialogRef = this.dialog.open(DelimiterComponent, {
+            width: '300px',
+        });
 
-        content += "\r\n";
-
-        for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
-            for (let colIndex = 0; colIndex < this.visibleColumns.length; colIndex++) {
-                let value = rows[rowIndex][this.visibleColumns[colIndex].Id];
-                if (value) {
-                    content += value + ";";
-                } else {
-                    content += ";";
-                }
+        dialogRef.afterClosed().subscribe(result => {
+            if (!this.dataSource) {
+                return;
             }
+
+            let rows = this.dataSource.connect().value;
+            let content = "";
+            for (let index = 0; index < this.visibleColumns.length; index++) {
+                content += this.visibleColumns[index].Name + ";"
+            }
+
             content += "\r\n";
-        }
 
-        var a = document.createElement('a');
-        a.href = this.pageUrl;
+            for (let rowIndex = 0; rowIndex < rows.length; rowIndex++) {
+                for (let colIndex = 0; colIndex < this.visibleColumns.length; colIndex++) {
+                    let value = rows[rowIndex][this.visibleColumns[colIndex].Id];
+                    if (value) {
+                        content += value + result;
+                    } else {
+                        content += result;
+                    }
+                }
+                content += "\r\n";
+            }
 
-        this.fileSaverService.saveText(content, a.hostname + ".csv");
+            var a = document.createElement('a');
+            a.href = this.pageUrl;
+
+            this.fileSaverService.saveText(content, a.hostname + ".csv");
+        });        
     }
 
     columns() {

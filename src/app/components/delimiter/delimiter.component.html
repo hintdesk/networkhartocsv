@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Select delimiter</h1>
+<div mat-dialog-content>
+    <mat-radio-group [(ngModel)]="selectedDelimiter" class="delimiter_container" aria-label="Select delimiter">
+        <mat-radio-button class="delimiter_item" value="tab">Tab</mat-radio-button>
+        <mat-radio-button class="delimiter_item" value=";">Semicolon</mat-radio-button>
+        <mat-radio-button class="delimiter_item" value=",">Comma</mat-radio-button>
+        <mat-radio-button class="delimiter_item" value=" ">Space</mat-radio-button>
+        <mat-radio-button class="delimiter_item" value="other">Other</mat-radio-button>
+        <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="otherValue">
+        </mat-form-field>
+    </mat-radio-group>
+</div>
+<div mat-dialog-actions>
+    <div class="button_container">
+        <button mat-button (click)="cancel()">Cancel</button>
+        <button mat-button (click)="ok()" cdkFocusInitial>Ok</button>
+    </div>
+</div>

@@ -24,6 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { TableComponent } from './components/table/table.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { DelimiterComponent } from './components/delimiter/delimiter.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HeaderComponent,
     InputComponent,
     TableComponent,
-    ColumnComponent
+    ColumnComponent,
+    DelimiterComponent
   ],
   imports: [
     BrowserModule,
@@ -53,12 +56,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatGridListModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatRadioModule,
+
 
     FileSaverModule
 
   ],
   entryComponents: [
-    ColumnComponent
+    ColumnComponent,
+    DelimiterComponent
   ],
   providers: [
     AppContext,
