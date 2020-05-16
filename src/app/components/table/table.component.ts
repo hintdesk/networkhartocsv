@@ -82,7 +82,7 @@ export class TableComponent implements OnInit {
         });
 
         dialogRef.afterClosed().subscribe(result => {
-            if (!this.dataSource) {
+            if (!this.dataSource || !result) {
                 return;
             }
 
