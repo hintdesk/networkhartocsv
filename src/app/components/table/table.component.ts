@@ -89,7 +89,7 @@ export class TableComponent implements OnInit {
             let rows = this.dataSource.connect().value;
             let content = "";
             for (let index = 0; index < this.visibleColumns.length; index++) {
-                content += this.visibleColumns[index].Name + ";"
+                content += this.visibleColumns[index].Name + result;
             }
 
             content += "\r\n";

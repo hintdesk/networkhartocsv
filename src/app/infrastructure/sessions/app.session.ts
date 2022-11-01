@@ -57,7 +57,7 @@ export class AppSession {
             new Column(Columns.NAME, "Name"),
             new Column(Columns.PATH, "Path"),
             new Column(Columns.PRIORITY, "Priority"),
-            // new Column(Columns.PROTOCOL, "Protocol"),
+            new Column(Columns.PROTOCOL, "Protocol"),
             new Column(Columns.REMOTEADDRESS, "Remote Address"),
             // new Column(Columns.RESPONSETIME, "Response Time"),
             new Column(Columns.SCHEME, "Scheme"),
